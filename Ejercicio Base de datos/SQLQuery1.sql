@@ -4,7 +4,7 @@ create table producto(
 id_producto int,
 nombre_producto varchar(100),
 descripcion_producto varchar(200),
-precio_producto decimal,
+precio_producto decimal(10,2),
 )
 
 insert into producto(id_producto,nombre_producto,descripcion_producto,precio_producto) values (1, 'alpina', 'botella de agua', 0.40)
@@ -19,6 +19,6 @@ Direccion varchar(100),
 );
 
 insert  into clientes(id_cliente,nombre_cliente,apellido_cliente,Direccion) values (1,'Carlos','Henriquez','Colonia');
-insert  into clientes(id_cliente,nombre_cliente,apellido_cliente,Direccion) values (1,'Carlos','Henriquez','Colonia');
+insert  into clientes(id_cliente,nombre_cliente,apellido_cliente,Direccion) values (2,'Carlos','Henriquez','Colonia');
 
 select * from clientes;
