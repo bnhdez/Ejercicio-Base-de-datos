@@ -1,14 +1,14 @@
 ﻿use [D70FFF2C19B8BD93571BAD5100E22AE6_ESTRUCTURADA\EJERCICIO BASE DE DATOS\EJERCICIO BASE DE DATOS\EJERCICIO BASE DE DATOS\TIENDA.MDF]
-
+/* tabla de productos */
 create table producto(
 id_producto int,
 nombre_producto varchar(100),
 descripcion_producto varchar(200),
 precio_producto decimal,
 )
-
+/* modifique columna de precio para especificar cantidad de decimales */
 alter table producto alter column precio_producto decimal(10,2);
-
+/* se eliminaron varias filas de prueba */ 
 delete from producto where id_producto = 1;
 
 insert into producto(id_producto,nombre_producto,descripcion_producto,precio_producto) values (1, 'alpina', 'botella de agua', 0.40)
@@ -19,7 +19,7 @@ insert into producto(id_producto,nombre_producto,descripcion_producto,precio_pro
 
 select * from producto;
 
-
+/* tabla de factura de producto */ 
 create table factura_producto(
 id_producto int,
 id_factura int,
@@ -34,14 +34,30 @@ insert into factura_producto(id_producto, id_factura, cantidad_producto) values 
 
 select * from factura_producto;
 
+/* tabla de clientes */
 create table clientes(
 id_cliente int, 
 nombre_cliente varchar(50),
-apellido_cliente varchar(50),
 Direccion varchar(100),
 );
 
-insert  into clientes(id_cliente,nombre_cliente,apellido_cliente,Direccion) values (1,'Carlos','Henriquez','Colonia');
-insert  into clientes(id_cliente,nombre_cliente,apellido_cliente,Direccion) values (2,'Carlos','Henriquez','Colonia');
+insert  into clientes(id_cliente,nombre_cliente,Direccion) values (1,'Carlos','San Salvador');
+insert  into clientes(id_cliente,nombre_cliente,Direccion) values (2,'Carlos','Mejicanos');
+insert  into clientes(id_cliente,nombre_cliente,Direccion) values (3,'Manuel','Santa Tecla');
 
 select * from clientes;
+
+/* tabla de tienda */
+create table tienda(
+id_tienda int,
+nombre varchar(100),
+direccion_tienda varchar(200),
+);
+
+insert into tienda(id_tienda, nombre, direccion_tienda) values (1, 'La Tiendona', 'San Salvador');
+insert into tienda(id_tienda, nombre, direccion_tienda) values (2, 'SIMAN', 'San Salvador');
+insert into tienda(id_tienda, nombre, direccion_tienda) values (3, 'La Curacao', 'Santa Tecla');
+insert into tienda(id_tienda, nombre, direccion_tienda) values (4, 'Super Selectos', 'Santa Ana');
+insert into tienda(id_tienda, nombre, direccion_tienda) values (5, 'SEARS', 'San Salvador');
+
+select * from tienda;
