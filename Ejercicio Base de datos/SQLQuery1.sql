@@ -19,6 +19,21 @@ insert into producto(id_producto,nombre_producto,descripcion_producto,precio_pro
 
 select * from producto;
 
+
+create table factura_producto(
+id_producto int,
+id_factura int,
+cantidad_producto int,
+);
+
+insert into factura_producto(id_producto, id_factura, cantidad_producto) values (1, 50030, 50);
+insert into factura_producto(id_producto, id_factura, cantidad_producto) values (2, 54730, 700);
+insert into factura_producto(id_producto, id_factura, cantidad_producto) values (3, 58917, 20);
+insert into factura_producto(id_producto, id_factura, cantidad_producto) values (4, 74568, 35);
+insert into factura_producto(id_producto, id_factura, cantidad_producto) values (5, 73830, 7);
+
+select * from factura_producto;
+
 create table clientes(
 id_cliente int, 
 nombre_cliente varchar(50),
