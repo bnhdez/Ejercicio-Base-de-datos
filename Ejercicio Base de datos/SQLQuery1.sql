@@ -61,3 +61,17 @@ insert into tienda(id_tienda, nombre, direccion_tienda) values (4, 'Super Select
 insert into tienda(id_tienda, nombre, direccion_tienda) values (5, 'SEARS', 'San Salvador');
 
 select * from tienda;
+
+/* tabla de factura */
+create table factura(
+id_factura int,
+id_tienda int,
+id_cliente int,
+cantidad_factura decimal(20,2),
+fecha_factura date,
+descripcion_factura varchar(25),
+);
+
+insert into factura(id_factura, id_tienda, id_cliente, cantidad_factura, fecha_factura, descripcion_factura) values (001,1,999,200.25,'2002-02-05','botella de agua');
+
+select * from factura;
