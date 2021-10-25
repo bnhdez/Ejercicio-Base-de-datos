@@ -4,8 +4,12 @@ create table producto(
 id_producto int,
 nombre_producto varchar(100),
 descripcion_producto varchar(200),
-precio_producto decimal(10,2),
+precio_producto decimal,
 )
+
+alter table producto alter column precio_producto decimal(10,2);
+
+delete from producto where id_producto = 1;
 
 insert into producto(id_producto,nombre_producto,descripcion_producto,precio_producto) values (1, 'alpina', 'botella de agua', 0.40)
 
