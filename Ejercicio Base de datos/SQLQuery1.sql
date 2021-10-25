@@ -73,5 +73,9 @@ descripcion_factura varchar(25),
 );
 
 insert into factura(id_factura, id_tienda, id_cliente, cantidad_factura, fecha_factura, descripcion_factura) values (001,1,999,200.25,'2002-02-05','botella de agua');
+insert into factura(id_factura, id_tienda, id_cliente, cantidad_factura, fecha_factura, descripcion_factura) values (12,1,25,50.00,'2001-08-07','silla de cocina');
+insert into factura(id_factura, id_tienda, id_cliente, cantidad_factura, fecha_factura, descripcion_factura) values (21,2,489,20.25,'2012-10-15','balon de football');
+insert into factura(id_factura, id_tienda, id_cliente, cantidad_factura, fecha_factura, descripcion_factura) values (101,4,14,17.99,'2010-04-25','gorra');
+insert into factura(id_factura, id_tienda, id_cliente, cantidad_factura, fecha_factura, descripcion_factura) values (41,4,367,24.99,'2020-12-24','camiseta blanca');
 
 select * from factura;
