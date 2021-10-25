@@ -12,6 +12,10 @@ alter table producto alter column precio_producto decimal(10,2);
 delete from producto where id_producto = 1;
 
 insert into producto(id_producto,nombre_producto,descripcion_producto,precio_producto) values (1, 'alpina', 'botella de agua', 0.40)
+insert into producto(id_producto,nombre_producto,descripcion_producto,precio_producto) values (2, 'cristal', 'botella de agua', 0.50)
+insert into producto(id_producto,nombre_producto,descripcion_producto,precio_producto) values (3, 'coca-cola', 'botella de soda', 0.75)
+insert into producto(id_producto,nombre_producto,descripcion_producto,precio_producto) values (4, 'fanta', 'botella de soda', 0.75)
+insert into producto(id_producto,nombre_producto,descripcion_producto,precio_producto) values (5, 'kolashanpan', 'botella de soda', 0.70)
 
 select * from producto;
 
